@@ -1,0 +1,25 @@
+const dotenv = require("dotenv");
+const mongoose = require("mongoose");
+const express = require("express");
+const app = express();
+const port = process.env.PORT || 3000;
+
+dotenv.config({path: "./config.env"});
+
+const DB = process.env.DATABASE;
+
+mongoose.connect(DB).then(() =>{
+    console.log(`connection successfull`);
+}).catch((err)=>{
+    console.log(`error no conn`);
+})
+
+// require("dotenv").config();
+
+
+
+
+
+app.listen(port, ()=>{
+    console.log(`Listening to port number ${port}`);
+})
