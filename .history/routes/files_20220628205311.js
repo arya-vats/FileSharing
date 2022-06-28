@@ -89,7 +89,6 @@ if(file.sender){
             expires: '24 hours',
         })
     });
-    return res.send({Success :  'True'})
 });
 
 module.exports = router;

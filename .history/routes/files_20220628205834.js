@@ -89,7 +89,7 @@ if(file.sender){
             expires: '24 hours',
         })
     });
-    return res.send({Success :  'True'})
+    return res.send({ error: 'Email already sent.'})
 });
 
 module.exports = router;

@@ -57,7 +57,6 @@ router.post('/' ,(req,res)=>{
 });
 
 router.post('/send' ,async(req,res)=>{
-    
    
 
     const {uuid, emailTo, emailFrom} = req.body //object destructuring
@@ -89,7 +88,6 @@ if(file.sender){
             expires: '24 hours',
         })
     });
-    return res.send({Success :  'True'})
 });
 
 module.exports = router;

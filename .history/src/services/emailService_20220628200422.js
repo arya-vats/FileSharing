@@ -1,5 +1,5 @@
 const nodemailer = require("nodemailer");
-// const SMTPConnection = require("nodemailer/lib/smtp-connection");
+const SMTPConnection = require("nodemailer/lib/smtp-connection");
 
 function sendMail({ from, to, subject, text, html}) {
     let transporter = nodemailer.createTransport({
@@ -11,7 +11,7 @@ function sendMail({ from, to, subject, text, html}) {
             pass : process.env.MAIL_PASSWORD
         }
     })
-    let info =transporter.sendMail({
+    let info = await transporter.sendMail({
         from:`inShare  <${from}>`, //left is key and right is value.
         to : to,
         subject: subject,
