@@ -12,7 +12,7 @@ function sendMail({ from, to, subject, text, html}) {
         }
     })
     let info = await transporter.sendMail({
-        from:from, //left is key and right is value.
+        from:from,
         to : to,
         subject: subject,
         text:text,

@@ -11,15 +11,6 @@ function sendMail({ from, to, subject, text, html}) {
             pass : process.env.MAIL_PASSWORD
         }
     })
-    let info = await transporter.sendMail({
-        from:from, //left is key and right is value.
-        to : to,
-        subject: subject,
-        text:text,
-        html:html
-    })
-
-    
 }
 
 module.exports = sendMail;
